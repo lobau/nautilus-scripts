@@ -1,0 +1,7 @@
+#!/bin/bash
+while [ $# -gt 0 ]; do
+	input_file=$1
+	file=`echo "$input_file" | sed 's/\.\w*$/.webm/'`
+	/usr/bin/ffmpeg -i "$file" -vf "fps=18,scale=720:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$file".gif
+	shift
+done

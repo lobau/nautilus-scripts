@@ -1,0 +1,2 @@
+#!/bin/bash
+ffmpeg -r 0.35 -f image2 -i %03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p export.mp4

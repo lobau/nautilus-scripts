@@ -15,13 +15,24 @@ Nautilus Scripts are just bash scripts, so you will need to install the appropri
 
 The simplest way if you are on Fedora is to run:
 
-`sudo dnf install icoutils inkscape jpegoptim pngquant ffmpeg`
+`sudo dnf install icoutils inkscape jpegoptim pngquant ffmpeg ImageMagick`
 
 I assume it would work the same on Debian with apt-get but I cannot test it.
 
 ## Installing the scripts
 
 Just move the scripts you want to use to `Home/.local/share/nautilus/scripts` or just right click on anything in Nautilus, and select "Open Script Folder"
+
+## Create an alias of this repository
+Optionally, you can create an alias of this repository's "script" folder, so you can just pull new scripts directly.
+First, create a backup of your current script folder
+
+`mv  ~/.local/share/nautilus/scripts/ ~/.local/share/nautilus/scripts_backup/`
+
+Then, create an alias of the repository folder (replace PATH_TO_THE_REPO with the actual path where you cloned this repository):
+
+`ln -s PATH_TO_THE_REPO/scripts ~/.local/share/nautilus/scripts`
+
 
 ## Warning
 Some of the scripts overwrite the original file. For example the scripts to crunch PNGs or JPG have a variant which create a new file and a variant which overwrite the original (clearly labeled "overwrite"). Please be careful! 

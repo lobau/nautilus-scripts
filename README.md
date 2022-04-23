@@ -9,6 +9,7 @@ Nautilus Scripts are just bash scripts, so you will need to install the appropri
 - inkscape to convert vector files
 - jpegoptim to optimize JPEG (aka Crunch)
 - pngquant to optimize PNGs (aka Crunch)
+- ImageMagick to convert image files
 - ffmpeg to manipulate videos (extract audio, remove audio, resize video, convert format or generate GIFs)
 
 ## Installing the command-line tools

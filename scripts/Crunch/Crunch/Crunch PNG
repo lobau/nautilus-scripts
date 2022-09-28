@@ -2,6 +2,6 @@
 while [ $# -gt 0 ]; do
 	picture=$1
 	png_file=`echo "$picture" | sed 's/\.\w*$/.png/'`
-	/usr/bin/pngquant -f "$png_file" --quality 80 --speed 1 --strip --ext .png
+	/usr/bin/pngquant "$png_file" --quality 80 --speed 1 --strip --ext -pngquant.png
 	shift
 done

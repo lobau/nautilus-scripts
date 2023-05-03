@@ -2,6 +2,6 @@
 while [ $# -gt 0 ]; do
 	input_file=$1
 	file=`echo "$input_file" | sed 's/\.\w*$/.mp4/'`
-	/usr/bin/ffmpeg -i "$file" -vf "fps=0.35,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$file".gif
+	toolbox run /usr/bin/ffmpeg -i "$file" -vf "fps=0.35,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$file".gif
 	shift
 done

@@ -14,7 +14,7 @@ Nautilus Scripts are just bash scripts, so you will need to install the appropri
 
 ## Installing the command-line tools
 
-The simplest way if you are on Fedora is to run:
+Install rpm-fusion if you don't have it, and run:
 
 `sudo dnf install icoutils inkscape jpegoptim pngquant ffmpeg ImageMagick`
 

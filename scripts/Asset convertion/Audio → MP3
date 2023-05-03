@@ -2,6 +2,6 @@
 while [ $# -gt 0 ]; do
 	file=$1
 	audio_file=`echo "$file"`
-	/usr/bin/ffmpeg -i "$audio_file" -acodec mp3 "$audio_file".mp3
+	toolbox run /usr/bin/ffmpeg -i "$audio_file" -acodec mp3 "$audio_file".mp3
 	shift
 done

@@ -2,6 +2,6 @@
 while [ $# -gt 0 ]; do
 	input_file=$1
 	file=`echo "$input_file" | sed 's/\.\w*$/.eps/'`
-	/usr/bin/inkscape --export-type="svg" --export-filename="$file" "$file"
+	toolbox run /usr/bin/inkscape --export-type="svg" --export-filename="$file" "$file"
 	shift
 done

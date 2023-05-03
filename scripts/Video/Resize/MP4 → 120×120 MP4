@@ -2,6 +2,6 @@
 while [ $# -gt 0 ]; do
 	input_file=$1
 	file=`echo "$input_file" | sed 's/\.\w*$/.mp4/'`
-	/usr/bin/ffmpeg -i "$file" -vf scale=120:-1 "$file"-120.mp4
+	toolbox run /usr/bin/ffmpeg -i "$file" -vf scale=120:-1 "$file"-120.mp4
 	shift
 done

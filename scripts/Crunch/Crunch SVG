@@ -2,6 +2,6 @@
 while [ $# -gt 0 ]; do
 	svg=$1
 	svg_file=`echo "$svg" | sed 's/\.\w*$/.svg/'`
-	svgo "$svg_file"
+	toolbox run svgo "$svg_file"
 	shift
 done

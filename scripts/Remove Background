@@ -1,0 +1,6 @@
+#!/bin/bash
+while [ $# -gt 0 ]; do
+	file=$1
+	toolbox run backgroundremover -i "$file" -o "$file".png
+	shift
+done
